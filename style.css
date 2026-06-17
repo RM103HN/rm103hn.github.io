@@ -457,37 +457,40 @@ img {
   border-color: rgba(255, 0, 110, 0.34);
 }
 
-.absurd-project .project-hero {
-  height: 600px;
+/* Absurd Calendar — two-column hero */
+.absurd-hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: auto;
+  min-height: 480px;
+  padding: 48px 40px;
   background: linear-gradient(135deg, #050505 0%, #151515 46%, #060606 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-.absurd-project .project-hero-img {
-  width: min(42%, 340px);
-  height: calc(100% - 48px);
-  margin: 24px 56px 24px auto;
+.absurd-hero-text {
+  flex: 1 1 55%;
+  min-width: 0;
+  z-index: 1;
+}
+
+.absurd-hero-phone {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.absurd-hero-phone img {
+  width: 280px;
+  height: auto;
+  max-height: 520px;
   object-fit: contain;
-  object-position: center;
-  background: #000;
-  border-radius: 28px;
+  border-radius: 24px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
-}
-
-.absurd-project .project-hero-overlay {
-  background:
-    linear-gradient(
-      90deg,
-      var(--bg-card) 0%,
-      rgba(24, 24, 24, 0.92) 36%,
-      rgba(24, 24, 24, 0.56) 62%,
-      rgba(24, 24, 24, 0.1) 100%
-    ),
-    linear-gradient(
-      to top,
-      var(--bg-card) 0%,
-      rgba(24, 24, 24, 0.12) 42%,
-      transparent 100%
-    );
 }
 
 .absurd-project .project-title,
@@ -779,25 +782,15 @@ img {
     height: 340px;
   }
 
-  .absurd-project .project-hero {
-    height: 620px;
+  .absurd-hero-layout {
+    flex-direction: column;
+    padding: 36px 20px;
+    gap: 28px;
+    min-height: auto;
   }
 
-  .absurd-project .project-hero-img {
-    width: min(68%, 280px);
-    height: 350px;
-    margin: 20px auto 0;
-  }
-
-  .absurd-project .project-hero-overlay {
-    background:
-      linear-gradient(
-        to top,
-        var(--bg-card) 0%,
-        rgba(24, 24, 24, 0.92) 34%,
-        rgba(24, 24, 24, 0.42) 70%,
-        transparent 100%
-      );
+  .absurd-hero-phone img {
+    width: 240px;
   }
 
   .project-hero-text {
@@ -854,13 +847,13 @@ img {
     width: 320px;
   }
 
-  .absurd-project .project-hero {
-    height: 590px;
+  .absurd-hero-layout {
+    padding: 28px 16px;
+    gap: 24px;
   }
 
-  .absurd-project .project-hero-img {
-    width: min(72%, 240px);
-    height: 315px;
+  .absurd-hero-phone img {
+    width: 200px;
   }
 
   .phone-gallery .gallery-item {
