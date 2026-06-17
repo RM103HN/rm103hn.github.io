@@ -369,6 +369,26 @@ img {
   z-index: 1;
 }
 
+.project-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.project-kicker img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
 .project-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
@@ -426,6 +446,69 @@ img {
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   letter-spacing: 0.5px;
+}
+
+/* Absurd Calendar project */
+.absurd-project {
+  border-color: rgba(255, 0, 110, 0.12);
+}
+
+.absurd-project:hover {
+  border-color: rgba(255, 0, 110, 0.34);
+}
+
+.absurd-project .project-hero {
+  height: 600px;
+  background: linear-gradient(135deg, #050505 0%, #151515 46%, #060606 100%);
+}
+
+.absurd-project .project-hero-img {
+  width: min(42%, 340px);
+  height: calc(100% - 48px);
+  margin: 24px 56px 24px auto;
+  object-fit: contain;
+  object-position: center;
+  background: #000;
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
+}
+
+.absurd-project .project-hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      var(--bg-card) 0%,
+      rgba(24, 24, 24, 0.92) 36%,
+      rgba(24, 24, 24, 0.56) 62%,
+      rgba(24, 24, 24, 0.1) 100%
+    ),
+    linear-gradient(
+      to top,
+      var(--bg-card) 0%,
+      rgba(24, 24, 24, 0.12) 42%,
+      transparent 100%
+    );
+}
+
+.absurd-project .project-title,
+.absurd-project .pill {
+  color: #ff0a68;
+}
+
+.absurd-project .pill {
+  background: rgba(255, 0, 110, 0.12);
+  border-color: rgba(255, 0, 110, 0.28);
+}
+
+.phone-gallery .gallery-item {
+  width: 260px;
+}
+
+.phone-gallery .gallery-item img {
+  height: 555px;
+  object-fit: cover;
+  object-position: top center;
+  background: #000;
 }
 
 /* ═══════════════════ SCREENSHOT GALLERY ═══════════════════ */
@@ -696,6 +779,27 @@ img {
     height: 340px;
   }
 
+  .absurd-project .project-hero {
+    height: 620px;
+  }
+
+  .absurd-project .project-hero-img {
+    width: min(68%, 280px);
+    height: 350px;
+    margin: 20px auto 0;
+  }
+
+  .absurd-project .project-hero-overlay {
+    background:
+      linear-gradient(
+        to top,
+        var(--bg-card) 0%,
+        rgba(24, 24, 24, 0.92) 34%,
+        rgba(24, 24, 24, 0.42) 70%,
+        transparent 100%
+      );
+  }
+
   .project-hero-text {
     left: 20px;
     right: 20px;
@@ -708,6 +812,14 @@ img {
 
   .gallery-item {
     width: 380px;
+  }
+
+  .phone-gallery .gallery-item {
+    width: 232px;
+  }
+
+  .phone-gallery .gallery-item img {
+    height: 496px;
   }
 
   .contact-links {
@@ -740,6 +852,23 @@ img {
 
   .gallery-item {
     width: 320px;
+  }
+
+  .absurd-project .project-hero {
+    height: 590px;
+  }
+
+  .absurd-project .project-hero-img {
+    width: min(72%, 240px);
+    height: 315px;
+  }
+
+  .phone-gallery .gallery-item {
+    width: 220px;
+  }
+
+  .phone-gallery .gallery-item img {
+    height: 470px;
   }
 
   .nav-links {
